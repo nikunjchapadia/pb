@@ -32,7 +32,12 @@ angular.module('pbApp')
         };
 
         $scope.getCurrentUserInfo = function(){
-            var url = "https://graph.facebook.com/" + $scope.userId + "?" + "access_token=" + $scope.accessToken;
+            var fields = "id,name,picture,age_range,address,about,email,gender,cover,birthday,hometown,locale,location";
+            var params = {
+                fields : fields,
+                access_token : $scope.accessToken
+            }
+            var url = "https://graph.facebook.com/me?" + $.param(params);
             console.log(url);
             $http.get(url).
                 success(function(data){
