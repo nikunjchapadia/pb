@@ -45,9 +45,10 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.name ? user.name : 'Welcome !'}}</a>
                 </li>
 
-                <li ng-hide="{{ user && user.name }}">
+                <li ng-hide="{{ user.name ? true : false }}">
                     <div class="fb-login-button" data-max-rows="2" data-size="xlarge" data-show-faces="false"
-                         data-auto-logout-link="false"></div>
+                         data-auto-logout-link="false">
+                    </div>
                 </li>
                 <!--<li class="dropdown">-->
                 <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
