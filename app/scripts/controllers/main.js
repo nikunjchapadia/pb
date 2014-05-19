@@ -2,11 +2,12 @@
 
 angular.module('pbApp')
     .controller('MainCtrl', function ($scope, $http) {
+
         $http.get('/api/awesomeThings').success(function (awesomeThings) {
             $scope.awesomeThings = "";
         });
 
-        $scope.getUserInfo = function () {
+        $scope.getLoginStatus = function () {
             $scope.userId = undefined;
             $scope.accessToken = undefined;
             FB.getLoginStatus(function(response) {
@@ -29,6 +30,20 @@ angular.module('pbApp')
                 }
             });
         };
+
+        $scope.getCurrentUserInfo = function(){
+            var url = "https://graph.facebook.com/" + $scope.userId + "?" + "access_token=" + $scope.accessToken;
+            console.log(url);
+            $http.get(url).
+                success(function(data){
+                    console.log("GETCURRENTUSERINFO : ");
+                    console.log(data);
+                    $scope.user = data;
+                }).
+                error(function(error){
+                    console.log(error);
+                });
+        }
 
 
     });

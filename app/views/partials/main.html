@@ -5,11 +5,13 @@
         <img src="images/yeoman.png" alt="I'm Yeoman"><br>
         Always a pleasure scaffolding your apps.
     </p>
-    <p><a class="btn btn-lg btn-success" ng-click="getUserInfo()">Splendid!</a></p>
-
+    <p>
+        <a class="btn btn-lg btn-success" ng-click="getLoginStatus()">Login Status!</a>
+    </p>
     <h4>User ID : {{ userId }}</h4>
     <h4>Expired In : {{ expiresIn }}</h4>
-    <!--<h6>Token   : {{ accessToken }}</h6>-->
+    <a class="btn btn-lg btn-success" ng-click="getCurrentUserInfo()">User Info</a>
+    <h6>Name : {{ user.name }} </h6>
 </div>
 
 <div class="row marketing">
