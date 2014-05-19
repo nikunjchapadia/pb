@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+<nav class="navbar navbar-fixed-top navbar-default" role="navigation" ng-controller="NavbarCtrl">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -38,7 +38,13 @@
       <!--</form>-->
       <ul class="nav navbar-nav navbar-right">
           <li>
-              <a href="#">Sign in with Facebook</a>
+              <h2>{{userId}}</h2>
+          </li>
+          <li>
+              <h2>{{accessToken}}</h2>
+          </li>
+          <li>
+              <a href="#" ng-click="getUserInfo()">Sign in with Facebook</a>
           </li>
         <li>
             <!--<div class="fb-login-button btn-primary" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>-->
