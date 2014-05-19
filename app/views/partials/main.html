@@ -1,34 +1,32 @@
 <div ng-controller="MainCtrl">
-<div ng-include="'partials/navbar'"></div>
-<div class="jumbotron">
+    <div class="jumbotron">
+        <h2 ng-hide="{{user && user.id > 0 }}">Welcome to Pame's Boutique</h2>
+        <h2 ng-show="{{user && user.id > 0 }}">Welcome {{ user.name }}</h2>
+        <p>
+            <a class="btn btn-lg btn-success" ng-click="getLoginStatus()">Login Status!</a>
+        </p>
+        <h4>User ID : {{ userId }}</h4>
+        <h4>Expired In : {{ expiresIn }}</h4>
+        <a class="btn btn-lg btn-success" ng-click="getCurrentUserInfo()">User Info</a>
+        <h6>Name : {{ user.name }} </h6>
+        <h6>Gender : {{ user.gender }} </h6>
+        <h6>Birthday : {{ user.birthday }} </h6>
+        <h6>Email : {{ user.email }} </h6>
 
-    <h2 ng-hide="{{user && user.id > 0 }}">Welcome to Pame's Boutique</h2>
-    <h2 ng-show="{{user && user.id > 0 }}">Welcome {{ user.name }}</h2>
-
-    <p>
-        <a class="btn btn-lg btn-success" ng-click="getLoginStatus()">Login Status!</a>
-    </p>
-    <h4>User ID : {{ userId }}</h4>
-    <h4>Expired In : {{ expiresIn }}</h4>
-    <a class="btn btn-lg btn-success" ng-click="getCurrentUserInfo()">User Info</a>
-    <h6>Name : {{ user.name }} </h6>
-    <h6>Gender : {{ user.gender }} </h6>
-    <h6>Birthday : {{ user.birthday }} </h6>
-    <h6>Email : {{ user.email }} </h6>
-    <p class="lead">
-        <img src="{{ user.picture.data.url ? user.picture.data.url : user.cover.source }}" alt=""><br>
-    </p>
-
-</div>
-
-<div class="row marketing">
-    <div ng-repeat="thing in awesomeThings">
-        <h4>{{thing.name}}</h4>
-        <p>{{thing.info}}</p>
+        <p class="lead">
+            <img src="{{ user.picture.data.url ? user.picture.data.url : user.cover.source }}" alt=""><br>
+        </p>
     </div>
-</div>
 
-<div class="footer">
-    <p class="text-center">♥ from the Pame's Boutique team</p>
-</div>
+    <div class="row marketing">
+        <div ng-repeat="thing in awesomeThings">
+            <h4>{{thing.name}}</h4>
+            <p>{{thing.info}}</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="text-center">♥ from the Pame's Boutique team</p>
+    </div>
+
 </div>

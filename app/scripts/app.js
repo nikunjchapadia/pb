@@ -11,8 +11,13 @@ angular.module('pbApp', [
             templateUrl: 'partials/main',
             controller: 'MainCtrl'
         })
+        .when('/additem', {
+            templateUrl: 'partials/addnewitem',
+            controller: 'AddItemCtrl'
+        })
         .otherwise({
-            redirectTo: '/'
+            templateUrl: 'partials/main',
+            controller: 'MainCtrl'
         });
 
     $locationProvider.html5Mode(true);

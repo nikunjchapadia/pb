@@ -1,3 +1,54 @@
 <div ng-controller="AddItemCtrl">
-    <h1> Add Item to collection</h1>
+
+    <div class="container-fluid" style="padding: 50px;max-width: 500px;">
+
+        <h1> {{ message }}</h1>
+
+        <form role="form">
+            <div class="form-group">
+                <label>Brand Name</label>
+                <input type="text" class="form-control" placeholder="Enter brand name">
+            </div>
+            <div class="form-group">
+                <label for="itemName">Item Name</label>
+                <input type="text" class="form-control" id="itemName" placeholder="Enter item name">
+            </div>
+            <div class="form-group">
+                <label for="itemType">Item Type</label>
+                <input type="text" class="form-control" id="itemType" placeholder="Enter item type">
+                <p class="help-block">Item type : shoe, t-shirt etc...</p>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <input type="text" class="form-control" placeholder="Male, Female, Kids ">
+            </div>
+            <div class="form-group">
+                <label>Size</label>
+                <input type="text" class="form-control" placeholder="Male, Female, Kids ">
+            </div>
+            <div class="form-group">
+                <label>Color</label>
+                <input type="text" class="form-control" placeholder="Male, Female, Kids ">
+            </div>
+            <div class="form-group">
+                <label>Real Price</label>
+                <input type="text" class="form-control" placeholder="Real Price">
+            </div>
+            <div class="form-group">
+                <label>Pame's Boutique Price</label>
+                <input type="text" class="form-control" placeholder="Pame's Boutique Price">
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="file" id="image">
+                <p class="help-block">Please select image from your computer.</p>
+            </div>
+            <!--<div class="checkbox">-->
+                <!--<label>-->
+                    <!--<input type="checkbox"> Check me out-->
+                <!--</label>-->
+            <!--</div>-->
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
 </div>
