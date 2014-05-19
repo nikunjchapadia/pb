@@ -1,11 +1,15 @@
 <div ng-include="'partials/navbar'"></div>
-<div class="jumbotron">
+<div class="jumbotron" ng-controller="MainCtrl">
     <h1>¡hola, ¡hola</h1>
     <p class="lead">
         <img src="images/yeoman.png" alt="I'm Yeoman"><br>
         Always a pleasure scaffolding your apps.
     </p>
     <p><a class="btn btn-lg btn-success" ng-click="getUserInfo()">Splendid!</a></p>
+
+    <h4>User ID : {{ userId }}</h4>
+    <h4>Expired In : {{ expiresIn }}</h4>
+    <!--<h6>Token   : {{ accessToken }}</h6>-->
 </div>
 
 <div class="row marketing">
