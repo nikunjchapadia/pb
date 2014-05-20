@@ -26,8 +26,7 @@ angular.module('pbApp').
                     $scope.images = [];
                     var photoset = data.photoset.photo;
                     _.each(photoset, function (e) {
-                        console.log(e.url_t)
-                        var image = {name: e.name, url: e.url_t};
+                        var image = {name: e.name, url: e.url_m};
                         $scope.images.push(image);
                     });
                 }).
