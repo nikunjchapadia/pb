@@ -4,7 +4,8 @@ angular.module('pbApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'angularFileUpload'
 ]).config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
