@@ -8,10 +8,12 @@
             <div class="form-group">
                 <label for="image">Images</label>
                 <input type="file" id="image" multiple>
-                <p class="help-block">Please select image from your computer.</p>
+                <p class="help-block">Please select image from your computer.
+                    <label class="label label-danger" ng-click="loadPreviewImages()">Preview Images</label>
+                </p>
             </div>
 
-            <div class="bs-example">
+            <div class="">
                 <div class="row">
                     <div ng-repeat="image in images">
                         <div class="col-xs-6 col-md-3">
@@ -24,6 +26,7 @@
                 </div>
             </div>
 
+            <div style="max-width: 500px;">
             <div class="form-group">
                 <label>Brand Name</label>
                 <input type="text"
@@ -83,8 +86,9 @@
             <button type="submit"
                     class="btn btn-success"
                     ng-click="saveOrders()">
-                    Submit
+                    Create Item
             </button>
+            </div>
             <!--<div ng-repeat="image in images">-->
                 <!--<div class="card jumbotron" data-index="20" style="-webkit-transform: translateZ(0px);"><h3>Stocks</h3>-->
 
