@@ -6,7 +6,6 @@ angular.module('pbApp').
 //                        itemType: undefined, color: undefined,
 //                        realPrice : undefined,price : undefined
 //                       };
-
         $scope.message = "Add New Item";
         $scope.item = $scope.item = { name: 'Bamboo Shoes', brandName: 'Bamboo',
             itemType: 'shoe', color: 'mint',
@@ -37,7 +36,17 @@ angular.module('pbApp').
 
         $scope.onFileSelect = function ($files) {
             _.each($files, function (file) {
-                console.log(file)
+                console.log(file);
+//                $scope.upload = $upload.upload({
+//                    url : '',
+//                    file : file
+//                }).
+//                progress(function(e){
+//                    console.log('% : ' + parseInt(100.0 * e.loaded / e.total));
+//                }).
+//                success(function(data,status,headrs,config){
+//                    console.log(data);
+//                });
             });
         };
 

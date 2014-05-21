@@ -7,10 +7,6 @@
         <form role="form">
             <div class="form-group">
                 <label for="image">Images</label>
-                <input type="text"
-                       ng-model="imageModel">
-                <input type="file"
-                       ng-file-select="onFileSelect($files)">
                 <input type="file"
                        id="image"
                        ng-file-select="onFileSelect($files)"
@@ -19,10 +15,10 @@
                 <p class="help-block">Please select image from your computer.
                     <label class="label label-danger" ng-click="loadPreviewImages()">Preview Images</label>
                 </p>
-                <div ng-file-drop="onFileSelect($files)"
-                     ng-file-drag-over-class="optional-css-class"
-                     ng-show="dropSupported">Drop files here
-                </div>
+                <!--<div ng-file-drop="onFileSelect($files)"-->
+                     <!--ng-file-drag-over-class="optional-css-class"-->
+                     <!--ng-show="dropSupported">Drop files here-->
+                <!--</div>-->
                 <div ng-file-drop-available="dropSupported=true"
                      ng-show="!dropSupported">Fuck You
                 </div>
