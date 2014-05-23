@@ -13,8 +13,12 @@ angular.module('pbApp').
             realPrice: 50.00, price: 27.00
         };
 
-        $scope.saveOrders = function () {
-            console.log($scope.item);
+        $scope.saveOrder = function () {
+            $scope.item.images = [];
+            _.each($scope.uploadedImages,function(e){
+                $scope.item.images.push(e);
+            });
+            console.log(JSON.stringify($scope.item));
             // take this one and save into db
         };
 

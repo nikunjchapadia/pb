@@ -7,39 +7,39 @@
         <form role="form">
             <div class="form-group">
                 <label for="image">Images</label>
+                <div class="">
+                    <div class="row">
+                        <div ng-repeat="image in uploadedImages">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#" class="thumbnail">
+                                    <img data-src="{{image.location}}" alt="" src="{{image.location}}" style="display: block;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <input type="file"
                        id="image"
                        ng-file-select="onFileSelect($files)"
                        multiple>
 
                 <p class="help-block">Please select image from your computer.
-                    <label class="label label-danger" ng-click="renderUploadedImages()">Preview Images</label>
+                    <!--<label class="label label-danger" ng-click="renderUploadedImages()">Preview Images</label>-->
                 </p>
                 <!--<div ng-file-drop="onFileSelect($files)"-->
                      <!--ng-file-drag-over-class="optional-css-class"-->
                      <!--ng-show="dropSupported">Drop files here-->
                 <!--</div>-->
-                <div ng-file-drop-available="dropSupported=true"
-                     ng-show="!dropSupported">Fuck You
-                </div>
-                <button class="btn btn-danger"
-                        ng-click="upload.abort()">
-                    Cancel Upload
-                </button>
+                <!--<div ng-file-drop-available="dropSupported=true"-->
+                     <!--ng-show="!dropSupported">Fuck You-->
+                <!--</div>-->
+                <!--<button class="btn btn-danger"-->
+                        <!--ng-click="upload.abort()">-->
+                    <!--Cancel Upload-->
+                <!--</button>-->
             </div>
 
-            <div class="">
-                <div class="row">
-                    <div ng-repeat="image in uploadedImages">
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="{{image.location}}" alt="" src="{{image.location}}" style="display: block;">
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
 
             <div style="max-width: 500px;">
             <div class="form-group">
@@ -100,7 +100,7 @@
             <!--</div>-->
             <button type="submit"
                     class="btn btn-success"
-                    ng-click="saveOrders()">
+                    ng-click="saveOrder()">
                     Create Item
             </button>
             </div>
