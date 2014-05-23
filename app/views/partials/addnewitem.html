@@ -13,7 +13,7 @@
                        multiple>
 
                 <p class="help-block">Please select image from your computer.
-                    <label class="label label-danger" ng-click="loadPreviewImages()">Preview Images</label>
+                    <label class="label label-danger" ng-click="renderUploadedImages()">Preview Images</label>
                 </p>
                 <!--<div ng-file-drop="onFileSelect($files)"-->
                      <!--ng-file-drag-over-class="optional-css-class"-->
@@ -30,10 +30,10 @@
 
             <div class="">
                 <div class="row">
-                    <div ng-repeat="image in images">
+                    <div ng-repeat="image in uploadedImages">
                         <div class="col-xs-6 col-md-3">
                             <a href="#" class="thumbnail">
-                                <img data-src="{{image.url}}" alt="" src="{{image.url}}" style="display: block;">
+                                <img data-src="{{image.location}}" alt="" src="{{image.location}}" style="display: block;">
                             </a>
                         </div>
 
