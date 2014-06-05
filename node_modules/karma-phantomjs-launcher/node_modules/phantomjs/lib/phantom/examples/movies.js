@@ -1,7 +1,7 @@
 // List movies from kids-in-mind.com
 
 var cbfunc = function (data) {
-    globaldata= data;
+    globaldata = data;
     var list = data.query.results.movie;
     list.forEach(function (item) {
         console.log(item.title + ' [' + item.rating.MPAA.content + ']');
