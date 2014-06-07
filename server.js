@@ -1,7 +1,7 @@
 'use strict';
-
 var express = require('express');
-var AWS = require('aws-sdk');
+
+
 /**
  * Main application file
  */
@@ -21,12 +21,20 @@ app.listen(config.port, config.ip, function () {
   console.log('Express server listening on %s:%d, in %s mode', config.ip, config.port, app.get('env'));
 });
 
-// var dynamodb = new AWS.DynamoDB();
-// var params = {};
-// dynamodb.describeTable(params, function (err, data) {
-//   if (err) console.log(err, err.stack); // an error occurred
-//   else     console.log(data);           // successful response
-// });
+// configure dynamo db
+var ddb = require('dynamodb').ddb(
+    {
+        accessKeyId: 'AKIAJ4HSSZEK5MXW2B6Q',
+        secretAccessKey: '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',
+        endpoint : 'dynamodb:us-west-2.amazonaws.com'
+    }
+);
+//console.log(ddb);
+ddb.describeTable('admin.tem', function(err, res) {
+    console.log(err);
+    console.log(res);
+});
+console.log(ddb.listTables({}, function(err, res) {}));
 
 // Expose app
 exports = module.exports = app;
