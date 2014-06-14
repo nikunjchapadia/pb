@@ -13,8 +13,20 @@ angular.module('pbApp', [
             controller: 'MainCtrl'
         })
         .when('/additem', {
-            templateUrl: 'partials/addnewitem',
+            templateUrl: 'partials/additem',
             controller: 'AddItemCtrl'
+        })
+        .when('/edititem', {
+            templateUrl: 'partials/edititem',
+            controller: 'EditItemCtrl'
+        })
+        .when('/manage', {
+            templateUrl: 'partials/manage',
+            controller: 'ManageCtrl'
+        })
+        .when('/orders', {
+            templateUrl: 'partials/orders',
+            controller: 'OrdersCtrl'
         })
         .otherwise({
             templateUrl: 'partials/main',
