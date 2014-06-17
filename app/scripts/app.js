@@ -28,6 +28,10 @@ angular.module('pbApp', [
             templateUrl: 'partials/orders',
             controller: 'OrdersCtrl'
         })
+        .when('/dynamo', {
+            templateUrl: 'partials/dynamo',
+            controller: 'DynamoCtrl'
+        })
         .otherwise({
             templateUrl: 'partials/main',
             controller: 'MainCtrl'
